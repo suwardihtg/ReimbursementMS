@@ -70,7 +70,7 @@ namespace API.Controllers
 
                     var idtoken = new JwtSecurityTokenHandler().WriteToken(token);
                     claims.Add(new Claim("TokenSecurity", idtoken.ToString()));
-                    return Ok(new JWTokenVM { Token = idtoken, Messages = "Login Sucsses" });
+                    return Ok(new JWTokenVM { Token = idtoken});
                 case 2:
                     return BadRequest();
                 case 3:

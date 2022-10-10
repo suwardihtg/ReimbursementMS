@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace API.Base
 {
@@ -21,33 +22,41 @@ namespace API.Base
         public ActionResult Get()
         {
             var result = repository.Get();
-            if (result.Count() != 0)
+            if (result != null)
             {
-                return Ok(result);
+                return Ok(new { status = 200, result = result }) ;
 
             }
             return NotFound();
         }
 
 
-        [HttpGet("{Id}")]
+        [HttpGet("{Key}")]
         public ActionResult Get(Key Key)
         {
+            if (string.IsNullOrWhiteSpace(Key.ToString()))
+            {
+                return BadRequest();
+            }
             var result = repository.Get(Key);
             if (result != null)
             {
-                return Ok(result);
+                return Ok(new {status = 200, result = result});
             }
             return NotFound();
         }
 
-        [HttpDelete("{Id}")]
+        [HttpDelete("{Key}")]
         public ActionResult Delete(Key key)
         {
+            if (string.IsNullOrWhiteSpace(key.ToString()))
+            {
+                return BadRequest();
+            }
             var result = repository.Delete(key);
             try
             {
-                return Ok();
+                return Ok(new {status = 200, data = "Deleted Data succes"});
             }
             catch (NullReferenceException)
             {
@@ -55,13 +64,17 @@ namespace API.Base
             }
         }
 
-        [HttpPut("{Id}")]
+        [HttpPut("{Key}")]
         public ActionResult Update(Entity entity, Key key)
         {
+            if (string.IsNullOrWhiteSpace(key.ToString()))
+            {
+                return BadRequest();
+            }
             var result = repository.Update(entity, key);
             try
             {
-                return Ok();
+                return Ok(new {status = 200, data = "Update data Success"});
             }
             catch (Exception)
             {
@@ -69,19 +82,19 @@ namespace API.Base
             }
         }
 
-        /*[HttpPost]
+        [HttpPost]
         public ActionResult Post(Entity entity)
         {
             try
             {
                 var result = repository.Insert(entity);
-                return Ok();
+                return Ok(new {status = 200, data = "Insert data Success"});
             }
             catch (Exception)
             {
                 return BadRequest();
             }
-        }*/
+        }
 
     }
 }

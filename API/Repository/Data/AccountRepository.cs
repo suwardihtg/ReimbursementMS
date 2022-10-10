@@ -28,9 +28,9 @@ namespace API.Repository.Data
                 employee.LastName = registerVM.LastName;
                 employee.Gender = (registerVM.Gender == "Male") ? Gender.Male : Gender.Female;
                 employee.Email = registerVM.Email;
-                employee.ManagerId = registerVM.ManagerId;
-                employee.DepartmentId = employee.DepartmentId;
-                employee.JobId = registerVM.JobId;
+                employee.ManagerId = registerVM.ManagerId; //can empity
+                employee.DepartmentId = employee.DepartmentId; //can empity
+                employee.JobId = registerVM.JobId;  
             }
 
             Account account = new Account();
