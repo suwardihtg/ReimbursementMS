@@ -19,6 +19,7 @@ namespace API.Models
         [Required,Index(IsUnique = true)]
         public string Email { get; set; }
         public Gender Gender { get; set; }
+        public string ManagerId { get; set; }
 
         public virtual Job Jobs { get; set; }
         public int? JobId { get; set; }
