@@ -3,6 +3,8 @@ using API.Hash;
 using API.Models;
 using API.ViewModel;
 using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace API.Repository.Data
 {
@@ -42,5 +44,31 @@ namespace API.Repository.Data
             context.SaveChanges();
             return 1;
         }
+
+        public int Login(LoginVM loginVM)
+        {
+            var dataPass = (from a in context.Employees
+                            where a.Email == loginVM.Email
+                            join b in context.Accounts on a.Id equals b.Id
+                            select new { Account = b, Employee = a }).FirstOrDefault();
+
+            if (dataPass == null)
+            {
+                return 4;
+            }
+            else if (dataPass.Employee.Email != null)
+            {
+                var cekPassword = Hashing.ValidatePassword(loginVM.Password, dataPass.Account.Password);
+                if (cekPassword == true)
+                {
+                    return 1;
+                }
+                return 2;
+            }
+            return 3;
+
+        }
+
+
     }
 }

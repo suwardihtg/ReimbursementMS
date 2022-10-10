@@ -35,7 +35,7 @@ namespace API.Context
             //One to One
             modelBuilder.Entity<Employee>()
                 .HasOne(a => a.Accounts)
-                .WithOne(b => b.Employees)
+                .WithOne(b => b.Employee)
                 .HasForeignKey<Account>(b => b.Id);
 
             //One to many

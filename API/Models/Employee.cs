@@ -16,11 +16,12 @@ namespace API.Models
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
-        [Required,Index(IsUnique = true)]
+        [Required]
         public string Email { get; set; }
         public Gender Gender { get; set; }
         public string ManagerId { get; set; }
 
+        [JsonIgnore]
         public virtual Job Jobs { get; set; }
         public int? JobId { get; set; }
 

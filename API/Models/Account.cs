@@ -18,7 +18,7 @@ namespace API.Models
         public string Password { get; set; }
 
         [JsonIgnore]
-        public virtual Employee Employees { get; set; }
+        public virtual Employee Employee { get; set; }
 
 
     }
