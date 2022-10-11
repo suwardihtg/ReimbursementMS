@@ -31,13 +31,11 @@ namespace API.Base
         }
 
 
-        [HttpGet("{Key}")]
+        [HttpGet]
+        [Route("Id")]
         public ActionResult Get(Key Key)
         {
-            if (string.IsNullOrWhiteSpace(Key.ToString()))
-            {
-                return BadRequest();
-            }
+           
             var result = repository.Get(Key);
             if (result != null)
             {
@@ -46,17 +44,15 @@ namespace API.Base
             return NotFound();
         }
 
-        [HttpDelete("{Key}")]
+        [HttpDelete]
+        [Route("Id")]
         public ActionResult Delete(Key key)
         {
-            if (string.IsNullOrWhiteSpace(key.ToString()))
-            {
-                return BadRequest();
-            }
+           
             var result = repository.Delete(key);
             try
             {
-                return Ok(new {status = 200, data = "Deleted Data succes"});
+                return Ok(new { status = 200, data = "Delete data Success" });
             }
             catch (NullReferenceException)
             {
@@ -64,13 +60,11 @@ namespace API.Base
             }
         }
 
-        [HttpPut("{Key}")]
+        [HttpPut]
+        [Route("Id")]
         public ActionResult Update(Entity entity, Key key)
         {
-            if (string.IsNullOrWhiteSpace(key.ToString()))
-            {
-                return BadRequest();
-            }
+            
             var result = repository.Update(entity, key);
             try
             {

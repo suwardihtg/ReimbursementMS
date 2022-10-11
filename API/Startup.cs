@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -35,13 +36,26 @@ namespace API
         {
 
             services.AddControllers();
+
+            //untuk mengakses menggunakan generic repo
             services.AddScoped<AccountRepository>();
+            services.AddScoped<RoleRepository>();   
+            services.AddScoped<JobRepository>();    
+            services.AddScoped<DepartmentRepository>();
+            services.AddScoped<EmployeeRepository>();
+            services.AddScoped<EmployeeAttachmentRepository>();
+
+            //koneksi ke database
             services.AddDbContext<MyContext>(options => options.UseSqlServer(Configuration.GetConnectionString("connection")));
+
+            //swagger
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
             });
 
+
+            //Jwt Bearer
             services.AddAuthentication(auth =>
             {
                 auth.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
