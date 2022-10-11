@@ -42,8 +42,12 @@ namespace API
             services.AddScoped<RoleRepository>();   
             services.AddScoped<JobRepository>();    
             services.AddScoped<DepartmentRepository>();
+            services.AddScoped<ReimburseHistoryRepository>();
             services.AddScoped<EmployeeRepository>();
             services.AddScoped<EmployeeAttachmentRepository>();
+            services.AddScoped<ReimburseRepository>();
+            services.AddScoped<RequestFormRepository>();    
+            
 
             //koneksi ke database
             services.AddDbContext<MyContext>(options => options.UseSqlServer(Configuration.GetConnectionString("connection")));

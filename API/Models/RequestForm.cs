@@ -24,7 +24,7 @@ namespace API.Models
 
     public enum Categori
     {
-        Parkir,
-        Tranportation
+        Transportation,
+        Parking
     }
 }
