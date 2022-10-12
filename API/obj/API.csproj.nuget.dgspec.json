@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\ProjectRM\\Reimburse Management System\\API\\API.csproj": {}
+    "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\Project\\ProjectRM\\Reimburse Management System\\API\\API.csproj": {
+    "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\ProjectRM\\Reimburse Management System\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\Project\\ProjectRM\\Reimburse Management System\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\Suwardi\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\ProjectRM\\Reimburse Management System\\API\\obj\\",
+        "projectPath": "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\fanyn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Suwardi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fanyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

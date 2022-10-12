@@ -8414,19 +8414,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Suwardi\\.nuget\\packages\\": {}
+    "C:\\Users\\fanyn\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\ProjectRM\\Reimburse Management System\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\fanyn\\Source\\Repos\\ReimbursementMS\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\Project\\ProjectRM\\Reimburse Management System\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\Suwardi\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\ProjectRM\\Reimburse Management System\\API\\obj\\",
+      "projectPath": "C:\\Users\\fanyn\\Source\\Repos\\ReimbursementMS\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\fanyn\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fanyn\\Source\\Repos\\ReimbursementMS\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Suwardi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fanyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

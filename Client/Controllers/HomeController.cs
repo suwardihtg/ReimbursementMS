@@ -1,4 +1,5 @@
 ﻿using Client.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -25,6 +26,12 @@ namespace Client.Controllers
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+
+        public IActionResult Login()
+        {
+            HttpContext.Session.SetString("Test", "Ben Rules!");
             return View();
         }
 

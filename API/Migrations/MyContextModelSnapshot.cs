@@ -241,13 +241,13 @@ namespace API.Migrations
 
             modelBuilder.Entity("API.Models.Account", b =>
                 {
-                    b.HasOne("API.Models.Employee", "Employees")
+                    b.HasOne("API.Models.Employee", "Employee")
                         .WithOne("Accounts")
                         .HasForeignKey("API.Models.Account", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Employees");
+                    b.Navigation("Employee");
                 });
 
             modelBuilder.Entity("API.Models.Employee", b =>

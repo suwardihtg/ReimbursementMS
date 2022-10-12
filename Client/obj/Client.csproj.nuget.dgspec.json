@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\ProjectRM\\Reimburse Management System\\Client\\Client.csproj": {}
+    "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\Client\\Client.csproj": {}
   },
   "projects": {
-    "D:\\Project\\ProjectRM\\Reimburse Management System\\Client\\Client.csproj": {
+    "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\ProjectRM\\Reimburse Management System\\Client\\Client.csproj",
-        "projectName": "Client",
-        "projectPath": "D:\\Project\\ProjectRM\\Reimburse Management System\\Client\\Client.csproj",
-        "packagesPath": "C:\\Users\\Suwardi\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\ProjectRM\\Reimburse Management System\\Client\\obj\\",
+        "projectUniqueName": "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\API\\API.csproj",
+        "projectName": "API",
+        "projectPath": "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\fanyn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Suwardi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fanyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,6 +28,116 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "BCrypt.Net-Core": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\Client\\Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\Client\\Client.csproj",
+        "projectName": "Client",
+        "projectPath": "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\Client\\Client.csproj",
+        "packagesPath": "C:\\Users\\fanyn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\fanyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\API\\API.csproj": {
+                "projectPath": "C:\\Users\\fanyn\\source\\repos\\ReimbursementMS\\API\\API.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
